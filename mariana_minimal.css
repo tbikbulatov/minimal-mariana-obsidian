@@ -1,0 +1,227 @@
+/* ------------------------------------------------------
+   Mariana palette (override for Minimal)
+------------------------------------------------------ */
+.theme-dark {
+  --background-primary:        #303841;
+  --background-secondary:      #1c2228;
+  --background-primary-alt:    #39424c;
+  --background-secondary-alt:  #171c22;
+
+  --text-normal:  #d8dee9;
+  --text-muted:   #a6acb9;
+  --text-faint:   #647382;
+
+  --interactive-accent:       #5c99d6;
+  --interactive-accent-hover: #6699cc;
+  --link-color:               var(--interactive-accent);
+  --link-color-hover:         var(--interactive-accent-hover);
+  --text-accent:              var(--interactive-accent);
+  --text-accent-hover:        var(--interactive-accent-hover);
+
+  --selection-background: rgba(89,102,115,0.45);
+  --cursor-color:        #f9ae58;
+
+  /* headings */
+  --h1-color: #ec5f66;
+  --h2-color: #f97b58;
+  --h3-color: #f9ae58;
+  --h4-color: #f9ae58;
+  --h5-color: #c695c6;
+  --h6-color: #6699cc;
+
+  /* code */
+  --code-background: rgba(89,102,115,.27);
+  --code-normal:     var(--text-normal);
+  --code-comment:    var(--text-muted);
+
+  /* tags */
+  --tag-background:        #39424c;
+  --tag-background-hover:  #616870;
+  --tag-color:             var(--text-normal);
+  --tag-color-hover:       #ffffff;
+
+  /* borders */
+  --background-modifier-border:       var(--text-faint);
+  --background-modifier-border-hover: var(--text-faint);
+  --background-modifier-border-focus: var(--text-faint);
+  --divider-color: rgba(255,255,255,0.08);
+
+  /* tables */
+  --table-border-color: rgba(255,255,255,0.06);
+  --table-row-alt-background: rgba(255,255,255,0.02);
+
+  /* panels / form fields */
+  --icon-color: var(--text-muted);
+  --background-modifier-form-field: var(--background-secondary);
+  --background-modifier-form-field-highlighted: var(--background-secondary);
+  --nav-item-color: var(--text-muted);
+}
+
+/* ------------------------------------------------------
+   Frame / app background
+------------------------------------------------------ */
+.theme-dark .workspace,
+.theme-dark .side-dock,
+.theme-dark .workspace-ribbon,
+.theme-dark .titlebar {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+.theme-dark
+.workspace-split,
+.theme-dark .workspace-tabs,
+.theme-dark .workspace-tab-header-container,
+.theme-dark .workspace-leaf,
+.theme-dark .workspace-tab-header-inner,
+.theme-dark .sidebar {
+  background-color: var(--background-secondary) !important;
+}
+
+/* active tab */
+.theme-dark .workspace-tab-header.is-active,
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+}
+
+/* ------------------------------------------------------
+   File explorer
+------------------------------------------------------ */
+.theme-dark .nav-folder-title,
+.theme-dark .nav-file-title,
+.theme-dark .nav-file-title-content,
+.theme-dark .nav-folder {
+  color: var(--text-muted) !important;
+  background: transparent !important;
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active {
+  background: var(--background-primary-alt) !important;
+  color: var(--text-normal) !important;
+}
+
+/* ------------------------------------------------------
+   Preview styling
+------------------------------------------------------ */
+.markdown-preview-view blockquote {
+  border-left: 3px solid var(--cursor-color);
+  color: var(--cursor-color);
+  opacity: 0.95;
+}
+
+.markdown-preview-view hr {
+  height: 1px;
+  background: var(--cursor-color);
+  border: none;
+}
+
+.markdown-preview-view code {
+  background: var(--code-background);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.markdown-preview-view pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ------------------------------------------------------
+   CodeMirror (kept minimal to avoid breaking Minimal)
+------------------------------------------------------ */
+.theme-dark .cm-editor,
+.theme-dark .cm-scroller {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+}
+
+.theme-dark .cm-comment  { color: var(--text-muted) !important; }
+.theme-dark .cm-string   { color: #99c794 !important; }
+.theme-dark .cm-number   { color: var(--cursor-color) !important; }
+.theme-dark .cm-keyword  { color: #c695c6 !important; }
+.theme-dark .cm-operator { color: #f97b58 !important; }
+.theme-dark .cm-variable { color: #6699cc !important; }
+.theme-dark .cm-variable-2 { color: #5fb4b4 !important; }
+.theme-dark .cm-def      { color: #5fb4b4 !important; }
+.theme-dark .cm-function { color: #5fb4b4 !important; }
+.theme-dark .cm-tag      { color: #ec5f66 !important; }
+.theme-dark .cm-attribute { color: #c695c6 !important; }
+
+.theme-dark .cm-formatting-code {
+  background: rgba(89,102,115,0.54) !important;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+
+.theme-dark .cm-matchingBracket {
+  outline: 1px solid var(--cursor-color) !important;
+}
+
+.theme-dark .cm-searching {
+  background: rgba(92,153,214,0.22) !important;
+}
+
+/* ------------------------------------------------------
+   UI — tags / menus / popovers
+------------------------------------------------------ */
+.theme-dark .tag {
+  background: var(--tag-background);
+  color: var(--tag-color);
+}
+
+.theme-dark .tag:hover {
+  background: var(--tag-background-hover);
+  color: var(--tag-color-hover);
+}
+
+.theme-dark .menu,
+.theme-dark .popover,
+.theme-dark .tooltip {
+  background: var(--background-secondary) !important;
+  color: var(--text-normal) !important;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ------------------------------------------------------
+   Scrollbars
+------------------------------------------------------ */
+.theme-dark ::-webkit-scrollbar {
+  width: 8px; height: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: rgb(85,89,95);
+  border-radius: 4px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: rgb(110,114,118) !important;
+}
+
+/* ------------------------------------------------------
+   Buttons
+------------------------------------------------------ */
+.theme-dark .mod-cta,
+.theme-dark .button,
+.theme-dark button {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------------------
+   Ribbon / misc
+------------------------------------------------------ */
+.mod-macos.is-hidden-frameless:not(.is-popout-window)
+.sidebar-toggle-button.mod-right {
+  background-color: var(--background-secondary) !important;
+}
+
+.workspace-ribbon.mod-left:before {
+  background-color: var(--background-secondary) !important;
+}
+
+body:not(.sidebar-color) .mod-right-split {
+    --background-secondary: #1c2228;
+}
